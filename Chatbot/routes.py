@@ -66,12 +66,14 @@ def logout():
 @app.route('/chatbot',methods=['GET'])
 @login_required
 def bot():
+    length=len(arr)
     message=request.args.get('msg')
-    arr.append(message)
-    arr.append(1)
-    response = main.callthis(message)
-    arr.append(response)
-    arr.append(0)
+    if message!=None:
+        arr.append(message)
+        arr.append(1)
+        response = main.callthis(message)
+        arr.append(response)
+        arr.append(0)
     length=len(arr)
     print(arr)
     return render_template('bot.html',arr=arr,length=length)

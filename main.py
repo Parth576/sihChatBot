@@ -8,7 +8,7 @@ import tflearn
 import tensorflow
 import random
 import json
-import pickle
+import pickle 
 
 with open("intents.json", encoding="utf-8") as file:
     data = json.load(file)
@@ -117,7 +117,7 @@ def callthis(userq):
         else:
             getout
     except:
-        model.fit(training, output, n_epoch=500, batch_size=10, show_metric=True)
+        model.fit(training, output, n_epoch=400, batch_size=10, show_metric=True)
         model.save("model.tflearn")
 
     '''
@@ -125,8 +125,13 @@ def callthis(userq):
     model.save("model.tflearn")
     '''
     ans = chat(userq)
-    print(ans)
-    return ans
+    fin=''
+    if isinstance(ans,list):
+        for x in ans:
+            fin+=x+', '
+    else:
+        fin=ans
+    return fin
 
 
 def chat(userq):
@@ -144,9 +149,9 @@ def chat(userq):
                 if tg['tag'] == tag:
                     responses = tg['responses']
 
-            response = str(random.choice(responses))
+            response = (random.choice(responses))
         else:
-            response = str("Sorry, I didn't get your question. You can try again or ask other question")
+            response = ("Sorry, I didn't get your question. You can try again or ask other question")
         
         #print(response)
         return response

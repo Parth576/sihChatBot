@@ -1,5 +1,8 @@
 {% extends "layout2.html" %} {% block extratitle %}
 <style>
+  #chatbox {
+    background-color: aquamarine;
+  }
   #textInput {
     width: 87%;
     border: none;
@@ -51,35 +54,36 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock %} {% block content %}
-
-<h1>Automated Healthcare Chatbot</h1>
 <div>
   <div id="chatbox">
-    <p class="botText">
-      <span>Please try typing full sentences as I am still learning!</span>
-    </p>
     <p class="botText">
       <span
         >I am a chatbot. You can begin conversation by typing in a message and
         pressing enter.</span
       >
     </p>
-    <p class="botText"><span>Hi There! What is your name?</span></p>
-  </div>
+    <p class="botText"><span>Hi There!</span></p>
+  
   {% for i in range(1,length,2) %}
     {% if arr[i-1]==1 %}
-        <p class="userText"><span>{{ arr[i] }}</span></p>
+    <p class="botText"><span>{{ arr[i] }}</span></p>
     {% else %}
-        <p class="botText"><span>{{ arr[i] }}</span></p>
+        <p class="userText"><span>{{ arr[i] }}</span></p>
     {% endif %}
   {% endfor %}
-
   <div id="userInput">
-    <input id="textInput" type="text" name="msg" placeholder="Message" />
-    <input id="buttonInput" type="submit" value="Send"></input>
-  </div>
+      <input id="textInput" type="text" name="msg" placeholder="Message" />
+      <input id="buttonInput" type="submit" value="Send"></input>
+    </div>
+</div>
+
+  
   
   <script>
+    var element=document.getElementById('chatbox');
+    window.onload = function(){ 
+    element.scrollIntoView(false); }
+    
     function getBotResponse() {
           var rawText = $("#textInput").val();
           var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
@@ -100,7 +104,7 @@
         });
         $("#buttonInput").click(function() {
           getBotResponse();
-        })
+        }) 
   </script>
 </div>
 
