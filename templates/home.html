@@ -1,0 +1,32 @@
+{% extends "layout2.html" %}
+{% block content %}
+
+<style>
+    body {
+        background-image: url(../static/pic.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .text {
+        padding-top: 100px;
+        padding-left: 900px;
+
+    }
+</style>
+
+<div class="text">
+    <h1>Description</h1>
+    <p class="para">Chat bots in health care may</br>have the potential to provide</br> patients with access
+        to</br>immediate medical information.</br>
+        Healthcare chat bots could</br>help patients better manage their</br>
+        own health, improve access and <br> timeliness to care for patients. <br>
+
+        <br>
+        <br>
+        <a style="color: crimson;" href="{{ url_for('bot') }}">LINK FOR CHATBOT</a>
+</div>
+
+
+
+{% endblock content %}
