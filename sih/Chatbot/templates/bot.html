@@ -1,0 +1,111 @@
+{% extends "layout2.html" %} {% block extratitle %}
+<style>
+  #chatbox {
+    background-color: aquamarine;
+  }
+  #textInput {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: monospace;
+    font-size: 17px;
+  }
+
+  #buttonInput {
+    padding: 3px;
+    font-family: monospace;
+    font-size: 17px;
+  }
+
+  .userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+  }
+
+  .userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  .botText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+  }
+
+  .botText span {
+    background-color: #ef5350;
+    padding: 10px;
+    border-radius: 2px;
+  }
+
+  #tidbit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %} {% block content %}
+<div>
+  <div id="chatbox">
+    <p class="botText">
+      <span
+        >I am a chatbot. You can begin conversation by typing in a message and
+        pressing enter.</span
+      >
+    </p>
+    <p class="botText"><span>Hi There!</span></p>
+  
+  {% for i in range(1,length,2) %}
+    {% if arr[i-1]==1 %}
+    <p class="botText"><span>{{ arr[i] }}</span></p>
+    {% else %}
+        <p class="userText"><span>{{ arr[i] }}</span></p>
+    {% endif %}
+  {% endfor %}
+  <div id="userInput">
+      <input id="textInput" type="text" name="msg" placeholder="Message" />
+      <input id="buttonInput" type="submit" value="Send"></input>
+    </div>
+</div>
+
+  
+  
+  <script>
+    var element=document.getElementById('chatbox');
+    window.onload = function(){ 
+    element.scrollIntoView(false); }
+    
+    function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          window.location.href="?msg="+rawText
+          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          $.get("/chatbot", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          });
+        }
+        $("#textInput").keypress(function(e) {
+            if(e.which == 13) {
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+          getBotResponse();
+        }) 
+  </script>
+</div>
+
+{% endblock %}

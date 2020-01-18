@@ -1,0 +1,634 @@
+{"intents": [
+  {"tag": "greeting",
+   "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+   "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+   "context_set": ""
+  },
+  {"tag": "goodbye",
+   "patterns": ["Bye", "See you later", "Goodbye"],
+   "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+  },
+  {"tag": "thanks",
+   "patterns": ["Thanks", "Thank you", "That's helpful"],
+   "responses": ["Happy to help!", "Any time!", "My pleasure"]
+  },
+  {"tag": "hours",
+   "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+   "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+  },
+  {"tag": "payments",
+   "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
+   "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+  },
+  {"tag": "opentoday",
+   "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+   "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+  },
+ {"tag": "allergy",
+   "patterns": ["I am suffering from allergy","I feel allergic","I am feeling allergic","I am experiencing allergy","I am going through allergy","I am having allergy","What happens in allergy","I have allergy","I suffer from allergy","What are the symptoms of allergy","What are the signs of allergy","What happens in allergy","What outcome should I expect in allergy","How will I know about allergy","what are the symptoms of allergy"],
+   "responses": [["nasal congestion","itchy and watery eyes","sneezing","stuffy or runny nose","scratchy throat","sore throat","throat clearing","cough from postnasal drip"]]
+  },
+   {"tag": "anemia",
+   "patterns": ["I am suffering from anemia","I feel anemia","I am feeling anemia","I am experiencing anemia","I am going through anemia","I am having anemia","What happens in anemia","I have anemia","I suffer from anemia","What are the symptoms of anemia","What are the signs of anemia","What happens in anemia","What outcome should I expect in anemia","How will I know about anemia","what are the symptoms of anemia"],
+   "responses": [["Feel tired or lightheaded (sometimes with fainting)","Weakness","Fatigue easily","Have decreased energy","Appear pale","Develop palpitations or rapid heart rate","Experience shortness of breath"]]
+  },
+{"tag": "cold",
+   "patterns": ["I am suffering from cold","I feel cold","I am feeling cold","I am experiencing cold","I am going through cold","I am having cold","What happens in cold","I have cold","I suffer from cold","What are the symptoms of cold","What are the signs of cold","What happens in cold","What outcome should I expect in cold","How will I know about cold","what are the symptoms of cold"],
+   "responses": [["Headaches", "body aches", "fever","flu-like symptoms","Nasal congestion"," runny nose", "sneezing","Cough","Sore throat"]]
+  },
+{"tag": " asthma",
+   "patterns": ["I am suffering from  asthma","I feel  asthma","I am feeling  asthma","I am experiencing  asthma","I am going through  asthma","I am having  asthma","What happens in  asthma","I have  asthma","I suffer from  asthma","What are the symptoms of  asthma","What are the signs of  asthma","What happens in  asthma","What outcome should I expect in  asthma","How will I know about  asthma","what are the symptoms of  asthma"],
+   "responses": [["shortness of breath"," chest pain","cough"]]
+  },
+{"tag": "alzheimers",
+   "patterns": ["I am suffering from  alzheimer's ", "I feel  alzheimer's ", "I am feeling  alzheimer's ", "I am experiencing  alzheimer's ", "I am going through  alzheimer's ", "I am having  alzheimer's ", "What happens in  alzheimer's ", "I have  alzheimer's ", "I suffer from  alzheimer's ", "What are the symptoms of  alzheimer's ", "What are the signs of  alzheimer's ", "What happens in  alzheimer's ", "What outcome should I expect in  alzheimer's ", "How will I know about  alzheimer's ", "what are the symptoms of  alzheimer's"],
+   "responses": [["loss of orientation (to person, place, or time)","agitation","irritability","quarrelsomeness","diminishing ability to care for myself"]]
+  },
+  {
+    "tag": "pregnancy",
+    "patterns": ["I am going through pregnancy","I think i am pregnant","I guess i am pregnant ","symptoms of pregnancy","how do i know if i am pregnant","am i pregnant"],
+    "responses": [["absence of menstrual periods", "breast swelling and tenderness","Food cravings"]]
+  },
+  {
+    "tag": "hyperthyroid",
+    "patterns": ["i am suffering from hyperthyroid", "I feel  hyperthyroid ", "I am feeling  hyperthyroid", "I am experiencing  hyperthyroid", "I am going through  hyperthyroid ", "I am having  hyperthyroid", "What happens in  hyperthyroid", "I have  hyperthyroid ", "I suffer from  hyperthyroid ", "What are the symptoms of  hyperthyroid", "What are the signs of  hyperthyroid", "What happens in  hyperthyroid ", "What outcome should I expect in  hyperthyroid", "How will I know about hyperthyroid", "what are the symptoms of hyperthyroid"],
+    "responses": [["a rapid heart rate", "excessive sweating", "intolerance to heat", "tremor", "nervousness", "agitation", "fatigue", "weight loss", "hair loss", "increased appetite", "problems with concentration", "frequent bowel movements", "irregular or decreased menstrual blood flow in women"]]
+  },
+  {
+    "tag": "hypothyroid",
+    "patterns": ["hypothyroid"],
+    "responses": [["fatigue", "depression", "mild weight gain", "cold intolerance", "sleepiness", "constipation dry and coarse hair", "dry skin", "muscle cramps","Blood cholesterol levels may be elevated."]]
+  },
+  {
+    "tag": "diabetes",
+    "patterns": ["what are the signs for diabetes","what are the symptoms of diabetes","what happens in diabetes","how will i know about diabetes","i am having diabetes"],
+    "responses": [["dehydration","hunger","increased urination", "increased thirst."]]
+  },
+  {
+    "tag": "HIV AIDS",
+    "patterns": ["what are the signs for HIV AIDS","what are the symptoms of HIV AIDS","what happens in HIV AIDS","how will i know about HIV AIDS","i am having HIV AIDS","what are the signs for HIV","what are the symptoms of HIV","what happens in HIV","how will i know about HIV","i am having HIV","what are the signs for AIDS","what are the symptoms of AIDS","what happens in AIDS","how will i know about AIDS","i am having AIDS"],
+    "responses": [["fever", "swollen lymph nodes", "joint and muscle aches","sore throat","chills", "night sweats","mouth ulcers"]]
+  },
+  {
+    "tag": "high blood pressure",
+    "patterns": ["what are the signs for high bp","what are the symptoms of high bp","what happens in high bp","how will i know about high bp","i am having high bp"],
+    "responses": [["dizziness, shortness of breath", "headache", "blurred vision",  "nosebleeds", "blood in the urine", "fatigue", "chest pain,"]]
+  },
+  {
+    "tag": "Rheumatoid Arthritis",
+    "patterns": ["Rheumatoid Arthritis"],
+    "responses": [["aches stiffness", "muscle aches", "low-grade fever", "fatigue", "lack of appetite", "loss of energy","Joints can become warm, swollen, reddened, painful"]]
+  },
+  {
+    "tag": "hepatitis B",
+    "patterns": ["hepatitis B"],
+    "responses": [["fatigue","loss of appetite","nausea","jaundice (yellowing of the skin and eyes)", "pain in the upper right abdomen (due to the inflamed liver)."]]
+  },
+  {
+    "tag": "Dengue",
+    "patterns": ["what are the signs for dengue","what are the symptoms of dengue","what happens in dengue","how will i know about dengues","i am having dengue","how will i know if i have dengue"],
+    "responses": [["headache", "fever", "exhaustion", "severe muscle joint pain", "swollen lymph nodes","rash", "fever", "itchy rash","headache"]]
+  },
+  {
+    "tag": "Malaria",
+    "patterns": ["what are the signs for malaria","what are the symptoms of malaria","what happens in malaria","how will i if i have malaria","i am having malaria"],
+    "responses": [["fever and chills","headaches,nausea and vomiting", "general weakness and body aches"]]
+  },
+  {
+    "tag": "Chicken Pox",
+    "patterns": ["what are the signs for chicken pox","what are the symptoms of chicken pox","what happens in chicken pox","how will i know if i have chicken pox","i am having chicken pox"],
+    "responses": [["general weakness", "fever up to 102 F", "red spots that start on the same day or so as the fever"]]
+  },
+  {
+    "tag": "jaundice",
+    "patterns": ["what are the signs for jaundice","what are the symptoms of jaundice","what happens in jaundice","how will i know about jaundice","i am having jaundice"],
+    "responses": [["Yellow discoloration of the skin","mucous membranes and the whites of the eyesLight-colored skin ","Poor feeding","Lethargy/excessive sleepiness","Changes in muscle tone (either listless or stiff with arching of the back)","High-pitched crying","Seizures"]]
+  },
+  {
+    "tag": "Diarrhea",
+    "patterns": ["what are the signs for diarrhea","what are the symptoms of diarrhea","what happens in diarrhea","how will i know about diarrhea","i am having diarrhea"],
+    "responses": [["bowel movements are frequent watery", "no signs of inflammation" , "cramping abdominal pain"]]
+  },
+  {
+    "tag": "cataract",
+    "patterns": ["cataract"],
+    "responses": [["decrease in clarity of vision, not fully correctable with glasses","loss of contrast sensitivity","Disturbing glare in light"]]
+  },
+  {
+    "tag": "pneumonia",
+    "patterns": ["what are the signs for pneumonia","what are the symptoms of pnuemonia","what happens in pnuemonia","how will i know about pnuemonia","i am having pnuemonia"],
+    "responses": [["fever,chills","cough","shortness of breath","fatigue."]]
+  },
+  {
+    "tag": "Urinary Retention",
+    "patterns": ["Urinary Retention"],
+    "responses": [["inability to urinate","painful, urgent need to urinate","pain or discomfort in the lower abdomen","bloating of the lower abdomen"]]
+  },
+  {
+    "tag": "Insomnia",
+    "patterns": ["what are the signs for insomnia","what are the symptoms of insomnia","what happens in insomnia","how will i know about insomnia","i am having insomnia"],
+    "responses": [["Waking up unrefreshed from lack of sleep","Daytime sleepiness","fatigue", "Mood changes", "Poor concentration","attention Anxiety","Headaches","Lack of energy","Increased errors and mistakes"]]
+  },
+  {
+    "tag": "Sinus Infection",
+    "patterns": ["Sinus Infection"],
+    "responses": [["sinus headache","facial tenderness","pressure or pain in the sinuses, in the ears and teeth","fever","cloudy discolored nasal or postnasal drainage","feeling of nasal stuffiness","sore throat,cough", "occasionally facial swelling"]]
+  },
+  {
+    "tag": "hepatitis c",
+    "patterns": ["hepatitis c"],
+    "responses": [["fatigue","loss of appetite","muscle aches","fever"]]
+  },
+  {
+    "tag": "mumps",
+    "patterns": ["mumps"],
+    "responses": [["swollen, painful salivary glands", "fever", "headache", "fatigue","appetite loss."]]
+  },
+  {
+    "tag": "measles",
+    "patterns": ["what are the signs for measles","what are the symptoms of measles","what happens in measles","how will i know about measles","i am having measles"],
+    "responses": [["dry cough","conjunctivitis","runny nose (coryza)", "high fever."]]
+  },
+  {
+    "tag": "botulism",
+    "patterns": ["botulism"],
+    "responses": [["double vision,blurred vision,drooping eyelids","slurred speech","difficulty swallowing","dry mouth","muscle weakness"]]
+  },
+  {
+    "tag": "mad cow disease",
+    "patterns": ["mad cow disease"],
+    "responses": [["rapid mental deterioration"]]
+  },
+  {
+    "tag": "meningetis",
+    "patterns": ["what are the signs for meningetis","what are the symptoms of meningetis","what happens in meningetis","how will i know about meningetis","i am having meningetis"],
+    "responses": [["sudden fever,headache","vomiting","visual sensitivity to light","stiff neck and back","confusion,drowsiness,unsteady gait","irritability","loss of consciousness","poor responsiveness","seizures","muscle weakness","sudden severe dementia", "memory loss"]]
+  },
+  {
+    "tag": "indigestion",
+    "patterns": ["what are the signs for indigestion","what are the symptoms of indigestion","what happens in indigestion","how will i know about indigestion","i am having indigestion"],
+    "responses": [["upper abdominal pain or discomfort:","belching","nausea","vomiting","abdominal bloating","feeling full after eating only a small amount of food (early satiety)", "andabdominal distention"]]
+  },
+  {
+    "tag": "constipation",
+    "patterns": ["what are the signs for constipation","what are the symptoms of constipation","what happens in constipation","how will i know about constipation","i am having constipation"],
+    "responses": [["Infrequent bowel movements","Straining when going to the bathroom","Hard and/or small feces","Sense of incomplete evacuation after going to the bathroom","Lower abdominal discomfort","Abdominal bloating, occasionally distension","Anal bleeding or fissures from the trauma caused by hard feces","Occasionally diarrhea due to obstruction of the colon by hard stool","Rarely, colonic perforation","Psychological distress and/or obsession with having to go to the bathroom","Possible aggravation of diverticular disease","hemorrhoids and rectal prolapse"]]
+  },
+  {
+    "tag": "appendicitis",
+    "patterns": ["appendicitis"],
+    "responses": [["abdominal pain","loss of appetite","nausea and vomiting","fever", "andabdominal tenderness."]]
+  },
+  {
+    "tag": "Anxiety Disorder",
+    "patterns": ["Anxiety Disorder"],
+    "responses": [["restlessness or feeling edgy","becoming tired easily, fatigue","trouble concentrating, that may also appear as memory or attention problems","feeling as if the mind is going blank","irritability","muscle tension","headaches","sleep problems"]]
+  },
+  {
+    "tag": "crohn's disease",
+    "patterns": ["crohn's disease"],
+    "responses": [["Abdominal pain","Diarrhea","Vomiting","Fever","Bloody diarrhea","Anal fistulae","Perirectal abscesses","Weight loss"]]
+  },
+  {
+    "tag": "narcolepsy",
+    "patterns": ["narcolepsy"],
+    "responses": [["Excessive daytime sleepiness","Cataplexy Hypnagogic", "hallucinations","Sleep paralysis","Disturbed nocturnal sleep","Automatic behavior","blurred vision, double vision, or droopy eyelids"]]
+  },
+  {
+    "tag": "cystinuria",
+    "patterns": ["cystinuria"],
+    "responses": [["Hematuria - blood in the urine","Flank pain - pain in the side, due to kidney pain","Renal colic - intense, cramping pain due to stones in the urinary tract","Obstructive uropathy - urinary tract disease due to obstruction","Urinary tract infections"]]
+  },
+  {
+    "tag": "prostatitis",
+    "patterns": ["prostatitis"],
+    "responses": [["Painful, difficult and/or frequent urinating","Blood in the urine","Groin pain, rectal pain", "abdominal pain and/or low back pain","Fever and chills","Malaise and body aches","Urethral discharge","Painful ejaculation or sexual dysfunction"]]
+  },
+  {
+    "tag": "Angina",
+    "patterns": ["Angina"],
+    "responses": [["chest pressure that radiates down the arm, into the neck or jaw",  "shortness of breath and sweating","pain heaviness,tightness and ache fullness"]]
+  },
+  {
+    "tag": "west nile virus",
+    "patterns": ["west nile virus"],
+    "responses": [["fever, headache", "body aches", "skin rash, and swollen lymph nodes","Severe symptoms and signs may include stiff neck, sleepiness, disorientation, coma, tremors, convulsions","paralysis"]]
+  },
+  {
+    "tag": "Staph Infection",
+    "patterns": ["Staph Infection"],
+    "responses": [["red,swollen, and tender or painful","Drainage or pus is common","When staph is in the blood (bacteremia or sepsis), it can cause high fevers, chills, and low blood pressure"]]
+  },
+  {
+    "tag": "Macular Degeneration(Age-Related Type)",
+    "patterns": ["Macular Degeneration(Age-Related Type)"],
+    "responses": [["common early sign is blurred vision"]]
+  },
+  {
+    "tag": "Retinal detachment",
+    "patterns": ["Retinal detachment"],
+    "responses": [["Flashing lights and floaters"]]
+  },
+  {
+    "tag": "Glaucoma",
+    "patterns": ["Glaucoma"],
+    "responses": [["haziness of vision and see haloes around lights, especially in the morning"]]
+  },
+  {
+    "tag": "hysterectomy",
+    "patterns": ["hysterectomy"],
+    "responses": [["heavy periods","pelvic painp","rolapse of the uterus","cancer of the womb, ovaries or cervix"]]
+  },
+  {
+    "tag": "yeast infection",
+    "patterns": ["yeast infection"],
+    "responses": [["a vaginal discharge that is typically thick, odorless, whitish-gray in color."]]
+  },
+  {
+    "tag": "anorexia",
+    "patterns": ["anorexia"],
+    "responses": [["underweight",  "worsen depression social withdrawal","irritable and easily upset","Sleep  disrupted","lead to fatigue during the day","Attention and concentration can decrease"]]
+  },
+  {
+    "tag": "chronic obstructive pulmonary disease 5",
+    "patterns": ["chronic obstructive pulmonary disease 5"],
+    "responses": [["cough","chest discomfort","shortness of breath","wheezing"]]
+  },
+  {
+    "tag": "emphysema",
+    "patterns": ["emphysema"],
+    "responses": [["shortness of breath and wheezing"]]
+  },
+  {
+    "tag": "boils",
+    "patterns": ["what are the signs for boils","what are the symptoms of boils","what happens in boils","how will i know if i have boils","i am having boils"],
+    "responses": [["tiny areas of infection in the base of the area of skin from which hair grows"]]
+  },
+  {
+    "tag": "keloid scar",
+    "patterns": ["keloid scar"],
+    "responses": [["raised and look shiny and dome-shaped, ranging in color from pink to red"]]
+  },
+  {
+    "tag": "rosacea",
+    "patterns": ["rosacea"],
+    "responses": [["acial flushing,blushing","skin redness (erythema),burning","red bumps and pustules","small cysts", "thickening of the facial tissue, especially the nose."]]
+  },
+  {
+    "tag": "shingles(herpes zoster)",
+    "patterns": ["shingles(herpes zoster)"],
+    "responses": [["one-sided stabbing pain","tingling, itching, burning, or stinging sensation that precedes the appearance of the rash by a few days","headache","fever and chills","nausea","body aches","fluid-filled blistering red rash typically on the torso or face."]]
+  },
+  {
+    "tag": "dandruff",
+    "patterns": ["what are the signs for dandruff","what are the symptoms of dandruff","what happens in dandruff","how will i know about dandruff","i am having dandruff"],
+    "responses": [["Reddish, scaly plaques appear in the eyebrows, on the forehead, in the ear canal, on the folds of skin that extend from the nostril to the commissure of the lips"]]
+  },
+  {
+    "tag": "acne",
+    "patterns": ["what are the signs for acne","what are the symptoms of acne","what happens in acne","how will i know if i have acne","i am having acne"],
+    "responses": [["uninflamed blackheads","pus-filled pimple", "large, red and tender bumps."]]
+  },
+  {
+    "tag": "common wart",
+    "patterns": ["common wart"],
+    "responses": [["fleshy, painless growth on the skin"]]
+  },
+  {
+    "tag": "Scleroderma",
+    "patterns": ["Scleroderma"],
+    "responses": [["redness, swelling, tenderness, itching","pain that can lead to skin tightness or hardening"]]
+  },
+  {
+    "tag": "Lichen planus",
+    "patterns": ["Lichen planus"],
+    "responses": [["itching varies from mild to severe","bumps at first are big in diameter, with angular borders and a violet colour"]]
+  },
+  {
+    "tag": "Dementia",
+    "patterns": ["what are the signs for dementia","what are the symptoms of dementia","what happens in dementia","how will i know about dementia","i am having dementia"],
+    "responses": [["simple forgetfulness, losing items","problems performing tasks or activities that were previously done without effort in old age"]]
+  },
+  {
+    "tag": "hives",
+    "patterns": ["hives"],
+    "responses": [["welts flare, itch, swell, and go away in a matter of minutes to hours, only to appear elsewhere."]]
+  },
+  {
+    "tag": "bulimia nervosa",
+    "patterns": ["bulimia nervosa"],
+    "responses": [["bingeing and purging",  "sore throat", "discolored, deteriorating teeth", "abdominal pain/cramping ","bloating",  "repeated vomiting", "swollen salivary glands","constipation","dehydration", "dry skin","thinning hair"]]
+  },
+  {
+    "tag": "erectile dysfunction",
+    "patterns": ["erectile dysfunction"],
+    "responses": [["Penile erection occurs, but the penis does not remain hard enough for completion of sex","Penile erections are not hard enough for penetration","There is an inability to obtain a penile erection","One can still achieve an orgasm and ejaculate with erectile dysfunction"]]
+  },
+  {
+    "tag": "Enlarged Prostate Gland",
+    "patterns": ["Enlarged Prostate Gland"],
+    "responses": [["slow flow of urine",  "need to urinate urgently" , "difficulty starting the urinary stream", "urinary tract infections", "blockage of the urethra"]]
+  },
+  {
+    "tag": "Dysthymia (Persistent Depressive Disorder)",
+    "patterns": ["Dysthymia (Persistent Depressive Disorder)"],
+    "responses": [["Loss of appetite or excessive hunger","Insomnia or excess sleepiness","Fatigue or other physical symptoms","slowness in activity and thought","Low self-esteem/feelings of inadequacy","Lack of concentration or making decisions","Hopelessness"]]
+  },
+  {
+    "tag": "panic attack",
+    "patterns": ["what are the signs for panic attack","what are the symptoms of panic attack","what happens in panic attack","how will i know about panic attack","i am having panic attack"],
+    "responses": [["racing or pounding heartbeat (palpitations)","chest pains","stomach upset","dizziness, lightheadedness, nausea","hyperventilation","difficulty breathing", "a sense of feeling smothered","a choking sensation","hand tingling or numbness","hot flashes/sweating or cold flashes/chills","trembling and shaking","dreamlike sensations or perceptual distortions like a feeling of detachment","terror, a sense that something unimaginably terrible is about to occur and one is powerless to prevent it","a need to escape","worrying about not knowing how to control their symptoms", "leading to them doing something embarrassing","fear of dying"]]
+  },
+  {
+    "tag": "bipolar disorder",
+    "patterns": ["bipolar disorder"],
+    "responses": [["elevated, expansive, or irritable mood","racing thoughts","pressured speech (rapid, excessive, and frenzied speaking)","decreased need for sleep","grandiose ideas (for example, false beliefs of superiority or failures)","tangential speech (repeatedly changing conversational topics to topics that are hardly related)","restlessness/increased goal-directed activity","impulsivity", "poor judgment or engaging in risky activity (like spending sprees, promiscuity, or excess desire for sex)"]]
+  },
+  {
+    "tag": "Indigestion(Dyspepsia)",
+    "patterns": ["Indigestion(Dyspepsia)"],
+    "responses": [["upper abdominal pain or discomfort (above or around the navel)","belching","nausea (with or without vomiting)","abdominal bloating (the sensation of abdominal fullness without visible distention)","early satiety (the sensation of fullness after a very small amount of food)","abdominal distention (visible swelling as opposed to bloating)", "lower chest pain"]]
+  },
+  {
+    "tag": "motion sickness",
+    "patterns": ["what are the signs for motion sickness","what are the symptoms of motion sickness","what happens in motion sickness","how will i know about motion sickness","i am having motion sickness"],
+    "responses": [["feeling of uneasiness followed by cold sweats",  "dizziness ","pale skin",  "increased saliva production","headache and fatigue" ,"Nausea"  ,"vomiting"]]
+  },
+  {
+    "tag": "respiratory acidosis",
+    "patterns": ["respiratory acidosis"],
+    "responses": [["fatigue or drowsiness","becoming tired easily","confusion","shortness of breath","sleepiness","headache"]]
+  },
+  {
+    "tag": "metabolic acidosis",
+    "patterns": ["metabolic acidosis"],
+    "responses":[["rapid and shallow breathing"," confusion ","fatigue", "headaches", "leepiness", "lack of appetite", "jaundice","increased heart rate","breath that smells fruity which is a sign of diabetic acidosis (ketoacidosis)"]]
+  },
+  {
+    "tag": "acute respiratory distress syndrome",
+    "patterns": ["acute respiratory distress syndrome"],
+    "responses": [["labored and rapid breathing","muscle fatigue and general weakness","low blood pressure","discolored skin or nailsa dry, hacking cough","fever","headaches","fast pulse rate","mental confusion"]]
+  },
+  {
+    "tag": "Addison's disease",
+    "patterns": ["Addison's disease"],
+    "responses":[["weakness in the muscles","fatigue and tiredness","darkening in skin color","weight loss or decreased appetite","a decrease in heart rate or blood pressure","low blood sugar levels","fainting spells","sores in the mouth","cravings for salt","nausea","vomiting","irritability or depression"]]
+  },
+  {
+    "tag": "Addisonian crisis",
+    "patterns": ["Addisonian crisis"],
+    "responses": [["mental status changes (confusion, fear, or restlessness)","loss of consciousness","high fever","sudden pain in the lower back, belly, or legs"]]
+  },
+  {
+    "tag": "beriberi",
+    "patterns": ["what are the signs for beriberi","what are the symptoms of beriberi","what happens in beriberi","how will i know about beriberi","i am having beriberi"],
+    "responses": [["shortness of breath during physical activity","waking up short of breath","rapid heart rate","swollen lower legs"]]
+  },
+  {
+    "tag": "dry beriberi",
+    "patterns": ["dry beriberi"],
+    "responses": [["decreased muscle function", "particularly in the lower legs","tingling or loss of feeling in the feet and hands","pain","mental confusion","difficulty in speaking","vomiting","involuntary eye movement","paralysis"]]
+  },
+  {
+    "tag": "thalamus and hypothalamus",
+    "patterns": ["thalamus and hypothalamus"],
+    "responses": [["confusion","memory loss","loss of muscle coordination","visual problems such as rapid eye movement and double vision"]]
+  },
+  {
+    "tag": "Bird Flu",
+    "patterns": ["Bird Flu"],
+    "responses": [["cough","diarrhea","respiratory difficulties","fever (over 100.4°F or 38°C)","headache","muscle achesmalaise","runny nose","sore throat"]]
+  },
+  {
+    "tag": "bone cancer",
+    "patterns": ["what are the signs for bone cancer","what are the symptoms of bone cancer","what happens in bone cancer","how will i know about bone cancer","i am having bone cancer"],
+    "responses": [["pain and swelling in the affected bone","spalpable hard mass in the long bones of the limbs","feeling tired or fatigued","easily broken bones","weight loss"]]
+  },
+  {
+    "tag": "bone tumour",
+    "patterns": ["what are the signs for bone tumour","what are the symptoms of bone tumour","what happens in bone tumour","how will i know if i have bone tumour","i am having bone tumour"],
+    "responses": [["dull ache in the affected bone weakened bone leading to severe pain"]]
+  },
+  {
+    "tag": "bronchiolitis",
+    "patterns": ["what are the signs for bronchiolotis","what are the symptoms of bronchiolitis","what happens in bronchiolitis","how will i know about bronchiolitis","i am having bronchiolitis"],
+    "responses": [["shortness of breath","wheezing bluish","appearance of the skin from lack of oxygen","crackling or rattling sounds heard in the lungs","fatigue","ribs that appear sunken during attempts to inhale (in children)","nasal flaring (in babies)","fast breathing","cough"]]
+  },
+  {
+    "tag": "tinnitus",
+    "patterns": ["tinnitus"],
+    "responses": [["Ringing in Ears"]]
+  },
+  {
+    "tag": "tonsillitis",
+    "patterns": ["what are the signs for tonsilitis","what are the symptoms of tonsilitis","what happens in tonsilitis","how will i know about tonsilitis","i am having tonsilitis"],
+    "responses": [["a very sore throat","difficulty in swallowing or painful swallowing","a scratchy-sounding voice","bad breath","fever","chills","stomach aches","head aches","a stiff neckjaw and neck tenderness due to swollen lymph nodes","tonsils that appear red and swollen tonsils that have white or yellow spots"]]
+  },
+  {
+    "tag": "Tularemia",
+    "patterns": ["Tularemia"],
+    "responses": [["a skin ulcer at the point of contact with the infected animal or at the site of a bite","swollen lymph nodes near the skin ulcer (most often in the armpit or groin)","severe headaches","fever","chills","fatigue"]]
+  },
+  {
+    "tag": "tuberculosis",
+    "patterns": ["what are the signs for tuberculosis","what are the symptoms of tuberculosis","what happens in tuberculosis","how will i know about tuberculosis","i am having tuberculosis","what are the signs for TB","what are the symptoms of TB","what happens in TB","how will i know about TB","i am having TB"],
+    "responses": [["unexplained fatigue","fevernight sweat","sappetite" ,"lossweight loss"]]
+  },
+  {
+    "tag": "typhus",
+    "patterns": ["typhus"],
+    "responses": [["severe headache","high fever (above 102.2°F)","rash that begins on the back or chest","spreads confusion","stupor and seeming out of touch with reality","low blood pressure (hypotension)","eye sensitivity to bright lights","severe muscle pain"]]
+  },
+  {
+    "tag": "Pancreatic Cancer",
+    "patterns": ["Pancreatic Cancer"],
+    "responses": [["loss of appetite","unintentional weight loss","abdominal (stomach) or lower back pain","blood clots","jaundice(yellow skin and eyes)","depression"]]
+  },
+  {
+    "tag": "hyperparathyroidism",
+    "patterns": ["hyperparathyroidism"],
+    "responses": [["bone fractures","kidney stones","excessive urination","mental changes such as depression, lethargy, or confusion","nausea","vomitting ","pain in your muscles or abdomen"]]
+  },
+  {
+    "tag": "paronychia",
+    "patterns": ["paronychia"],
+    "responses": [["redness of the skin around your nail","tenderness of the skin around your nail","pus-filled blisters","changes in nail shape, color, or texture","detachment of your nail"]]
+  },
+{
+      "tag":"baby",
+      "patterns":["birth","born","new born"],
+      "responses":[["Bacillus Calmette–Guérin (BCG)","Oral polio vaccine (OPV 0)","Hepatitis B (Hep – B1)"]]
+  },
+  {
+      "tag":"6 weeks",
+      "patterns":["6 weeks","six weeks"],
+      "responses":[["Diptheria, Tetanus and Pertussis vaccine (DTwP 1)","Inactivated polio vaccine (IPV 1)","Hepatitis B  (Hep – B2)","Haemophilus influenzae type B (Hib 1)","Rotavirus 1","Pneumococcal conjugate vaccine (PCV 1)"]]
+  },
+  {
+      "tag":"10 weeks",
+      "patterns":["10 weeks","ten weeks"],
+      "responses":[["Diptheria, Tetanus and Pertussis vaccine (DTwP 2)","Inactivated polio vaccine (IPV 2)","Haemophilus influenzae type B (Hib 2)","Rotavirus 2","Pneumococcal conjugate vaccine (PCV 2)"]]
+  },
+  {
+      "tag":"14 weeks",
+      "patterns":["14 weeks","fourteen weeks"],
+      "responses":[["Diptheria, Tetanus and Pertussis vaccine (DTwP 3)","Inactivated polio vaccine (IPV 3)","Haemophilus influenzae type B (Hib 3)","Rotavirus 3","Pneumococcal conjugate vaccine (PCV 3)"]]
+  },
+  {
+      "tag":"6 months",
+      "patterns":["6 months","six months"],
+      "responses":[["Oral polio vaccine (OPV 1)","Hepatitis B (Hep – B3)"]]
+  },
+  {
+      "tag":"9 months",
+      "patterns":["9 months","nine months"],
+      "responses":[["Oral polio vaccine (OPV 2)","Measles, Mumps, and Rubella (MMR – 1)"]]
+  },
+  {
+      "tag":"9-11 months",
+      "patterns":["9 months","10 months","11 months","nine months","ten months","eleven months"],
+      "responses":[["Typhoid Conjugate Vaccine"]]
+  },
+  {
+      "tag":"12 months",
+      "patterns":["12 months","twelve months"],
+      "responses":[["Hepatitis A (Hep – A1)","Influenza (Yearly)"]]
+  },
+  {
+      "tag":"15 months",
+      "patterns":["15 months","fifteen months"],
+      "responses":[["Measles, Mumps, and Rubella (MMR 2)","Varicella 1","PCV booster","Influenza (Yearly)"]]
+  },
+  {
+      "tag":"16-17 months",
+      "patterns":["16 months","17 months","18 months","sixteen months","seventeen months"],
+      "responses":[["Diphtheria, Perussis, and Tetanus (DTwP B1/DTaP B1)","Inactivated polio vaccine (IPV B1)","Haemophilus influenzae type B (Hib B1)"]]
+  },
+  {
+      "tag":"18 months",
+      "patterns":["18 months","eighteen months"],
+      "responses":[["Hepatitis A (Hep – A2)"]]
+  },
+  {
+      "tag":"2 years",
+      "patterns":["2 years","two years"],
+      "responses":[["Booster of Typhoid Conjugate Vaccine"]]
+  },
+  {
+      "tag":"4-7 years",
+      "patterns": ["vaccination for 4 years","5 years","6 years","four years","five years","six years"],
+      "responses":[["Diphtheria, Perussis, and Tetanus (DTwP B2/DTaP B2)","Oral polio vaccine (OPV 3)","Varicella 2","Measles, Mumps, and Rubella (MMR 3)"]]
+  },
+  {
+      "tag":"9-14 years",
+      "patterns":["9 years","10 years","11 years","12 years","13 years","14 years","nine years","ten years","eleven years","twelve years","thirteen years","fourteen years"],
+      "responses":[["Tdap/Td","Human Papilloma Virus (HPV 1 & 2)"]]
+  },
+  {
+      "tag":"15-18 years",
+      "patterns":["15 years","16 years","17 years","18 years","fifteen years","sixteen years","seventeen years","eighteen years"],
+      "responses":[["Tdap/Td","Human Papilloma Virus (HPV 1,2 and 3)"]]
+  },
+{"tag":"prevention for allergy" ,
+"patterns": ["How to prevent allergy","What can be done to prevent allergy","What are the precautions for allergy","What precautions can be taken for allergy","What are the prevention methods for allergy","What can be done to avoid allergy","How should i avoid allergy","What should I do to prevent allergy","What should I do to avoid allergy"],
+"responses": [["Stay indoors on dry, windy days. Remove clothes you've worn outside and shower to rinse pollen from your skin and hair. Wear a mask. Avoid Contaminating Your Food Supply."]]
+},
+{"tag":"prevention for anemia" ,
+"patterns": ["How to prevent anemia","What can be done to prevent anemia","What are the precautions for anemia","What precautions can be taken for anemia","What are the prevention methods for anemia","What can be done to avoid anemia","How should i avoid anemia","What should I do to prevent anemia","What should I do to avoid anemia"],
+"responses": [["Eat plenty of iron-rich foods, such as tofu, green and leafy vegetables, lean red meat, lentils, beans and iron-fortified cereals and breads. Eat and drink vitamin C-rich foods and drinks. Avoid drinking tea or coffee with your meals, as they can affect iron absorption. Treat the cause of blood loss. Eat foods with iron. Eat and drink foods that help your body absorb iron, like orange juice, strawberries, broccoli, or other fruits and vegetables with vitamin C. Avoid drinking coffee or tea with meals."]]
+},
+{"tag":"prevention for cold" ,
+"patterns": ["How to prevent cold","What can be done to prevent cold","What are the precautions for cold","What precautions can be taken for cold","What are the prevention methods for cold","What can be done to avoid cold","How should i avoid cold","What should I do to preventcold","What should I do to avoid cold"],
+"responses": [["Wash your hands often. Washing your hands for at least 20 seconds can help protect you from getting sick. Avoid touching your face. Don't smoke. Use disposable items if a family member is infected. Keep household surfaces clean.Wash toys. Use paper towels. Throw tissues away after use.Broths."]]
+},
+{"tag":"prevention for asthma" ,
+"patterns": ["How to prevent asthma","What can be done to prevent asthma","What are the precautions for asthma","What precautions can be taken for asthma","What are the prevention methods for asthma","What can be done to avoid asthma","How should i avoid asthma","What should I do to prevent asthma","What should I do to avoid asthma"],
+"responses": [["Follow your asthma action plan. Get vaccinated for influenza and pneumonia. Identify and avoid asthma triggers. Monitor your breathing. Identify and treat attacks early. Take your medication as prescribed. Pay attention to increasing quick-relief inhaler use. Vitamin D-rich foods, such as milk and eggs. Beta carotene-rich vegetables, such as carrots and leafy greens. Magnesium-rich foods, such as spinach and pumpkin seeds."]]
+},
+{"tag":"prevention for alzheimers" ,
+"patterns": ["How to prevent alzheimers","What can be done to prevent alzheimers","What are the precautions for alzheimers","What precautions can be taken for alzheimers","What are the prevention methods fo alzheimers","What can be done to avoid alzheimers","How should i avoid alzheimers","What should I do to prevent alzheimers","What should I do to avoid alzheimers"],
+"responses": [["Get plenty of omega-3 fats.Evidence suggests that the DHA found in these healthy fats may help prevent Alzheimer's disease and dementia by reducing beta-amyloid plaques. Food sources include cold-water fish such as salmon, tuna, trout, mackerel, seaweed, and sardines. You can also supplement with fish oil.Inflammatory diet patterns that are high in sugar, refined carbs, unhealthy fats and processed foods can contribute to impaired memory and learning, as well as increase your risk of diseases such as Alzheimer's and dementia."]]
+},
+{"tag":"prevention for pregnancy" ,
+"patterns": ["How to prevent pregnancy","What can be done to prevent pregnancy","What are the precautions for pregnancy","What precautions can be taken for pregnancy","What are the prevention methods for pregnancy","What can be done to avoid pregnancy","How should i avoid pregnancy","What should I do to prevent pregnancy","What should I do to avoid pregnancy"],
+"responses": [["Male condoms. Share on Pinterest Condoms can protect against STIs as well as pregnancy. Female condoms. Diaphragm. A diaphragm is a barrier method of contraception that a person places inside the vagina. Cervical cap. Sponge. .Spermicide."]]
+},
+{"tag":"prevention for hyperthyroid" ,
+"patterns": ["How to prevent hyperthyroid","What can be done to prevent hyperthyroid","What are the precautions for hyperthyroid","What precautions can be taken for hyperthyroid","What are the prevention methods for hyperthyroid","What can be done to avoid hyperthyroid","How should i avoid hyperthyroid","What should I do to prevent hyperthyroid","What should I do to avoid hyperthyroid"],
+"responses": [["Hyperthyroidism caused by taking too much thyroid medication can be prevented. Follow your doctor's instructions. Periodically get blood tests to check thyroid levels. Naturally occurring hyperthyroidism cannot be prevented."]]
+},
+{"tag":"prevention for hypothyroid" ,
+"patterns": ["How to prevent hypothyroid","What can be done to prevent hypothyroid","What are the precautions for hypothyroid","What precautions can be taken for hypothyroid","What are the prevention methods for hypothyroid","What can be done to avoid hypothyroid","How should i avoid hypothyroid","What should I do to prevent hypothyroid","What should I do to avoid hypothyroid"],
+"responses": [["There is no way to prevent hypothyroidism, but people who may have a higher risk of thyroid problems, for example, women during pregnancy, should check with their doctor about the need for additional iodineThey are low in calories and very filling, which may help prevent weight gain. Summary People with hypothyroidism have plenty of healthy food options, including eggs, meat, fish, most fruits and vegetables, gluten-free grains and seeds, all dairy products, and non-caffeinated beverages."]]
+},
+{"tag":"prevention for diabetes" ,
+"patterns": ["How to prevent diabetes","What can be done to prevent diabetes","What are the precautions for diabetes","What precautions can be taken for diabetes","What are the prevention methods for diabetes","What can be done to avoid diabetes","How should i avoid diabetes","What should I do to prevent diabetes","What should I do to avoid diabetes"],
+"responses": [["Cut Sugar and Refined Carbs From Your Diet. Work Out Regularly. Drink Water as Your Primary Beverage. Lose Weight If You're Overweight or Obese. Quit Smoking. Follow a Very-Low-Carb Diet. Watch Portion Sizes."]]
+},
+{"tag":"prevention for HIV AIDS" ,
+"patterns": ["How to prevent HIV AIDS","What can be done to prevent HIV AIDS","What are the precautions for HIV AIDS","What precautions can be taken for HIV AIDS","What are the prevention methods for HIV AIDS","What can be done to avoid HIV AIDS","How should i avoid HIV AIDS","What should I do to prevent HIV AIDS","What should I do to avoid HIV AIDS"],
+"responses": [["Use condoms the right way every time you have anal or vaginal sex. Choose sexual activities with little to no risk, like oral sex. You could also use condoms or dental dams with oral sex to lower the risk even more. Your partner can take medicine to prevent HIV, called pre-exposure prophylaxis (PrEP)."]]
+},
+{"tag":"foods to be avoided in allergy" ,
+"patterns": ["What to eat in allergy","What can be eaten in allergy","What food is recommended in allergy","What can be consumed in allergy","What food is the best in allergy","What should i eat if im suffering from allergy","What all can I eat if I'm suffering from allergy","What should i eat if im diagnosed with allergy","What all can I eat if I'm diagnosed with allergy"],
+"responses": [["Onions, peppers, berries, and parsley .Kiwi is a fuzzy fruit rich in vitamin C. It can also cut down on histamines. Pineapple has an enzyme called bromelain. Tuna, salmon, and mackerel have Omega-3 fatty acids."]]
+},
+{"tag":"foods to be avoided in anemia" ,
+"patterns": ["What to eat in anemia","What can be eaten in anemia","What food is recommended in anemia","What can be consumed in anemia","What food is the best in anemia","What should i eat if im suffering from anemia","What all can I eat if I'm suffering from anemia","What should i eat if im diagnosed with anemia","What all can I eat if I'm diagnosed with anemia"],
+"responses": [["Leafy greens. Leafy greens, especially dark ones, are among the best sources of nonheme iron. Meat and poultry. All meat and poultry contain heme iron. Seafood. Fortified foods. Beans. Nuts and seeds."]]
+},
+{"tag":"foods to be avoided in cold" ,
+"patterns": ["What to eat in cold","What can be eaten in cold","What food is recommended in cold","What can be consumed in cold","What food is the best in cold","What should i eat if im suffering from cold","What all can I eat if I'm suffering from cold","What should i eat if im diagnosed with cold","What all can I eat if I'm diagnosed with cold"],
+"responses": [["Similar to chicken soup, broths are excellent sources of hydration while you're sick. Garlic. Coconut Water. Hot Tea. Honey. Ginger. Spicy Foods."]]
+},
+{"tag":"foods to be avoided in asthma" ,
+"patterns": ["What to eat in asthma","What can be eaten in asthma","What food is recommended in asthma","What can be consumed in asthma","What food is the best in asthma","What should i eat if im suffering from asthma","What all can I eat if I'm suffering from asthma","What should i eat if im diagnosed with asthma","What all can I eat if I'm diagnosed with asthma"],
+"responses": [["Eggs.Cow's milk.Peanuts.Soy.Wheat.Fish.Shrimp and other shellfish. Tree nuts."]]
+},
+{"tag":"foods to be avoided in alzheimers" ,
+"patterns": ["What to eat in alzheimers","What can be eaten in alzheimers","What food is recommended in alzheimers","What can be consumed in alzheimers","What food is the best in alzheimers","What should i eat if im suffering from alzheimers","What all can I eat if I'm suffering fro alzheimers","What should i eat if im diagnosed with alzheimers","What all can I eat if I'm diagnosed with alzheimers"],
+"responses": [["Alzheimer's: green leafy vegetables, other vegetables, nuts, berries, beans, whole grains, fish, poultry, olive oil and wine.At least three servings of whole grains a day.Green leafy vegetables (such as salad) at least six times a week.Other vegetables at least once a day.Berries at least twice a week.Red meat less than four times a week.Fish at least once a week.Poultry at least twice a week.Beans more than three times a week."]]
+},
+{"tag":"foods to be avoided in pregnancy" ,
+"patterns": ["What to eat in pregnancy","What can be eaten in pregnancy","What food is recommended in pregnancy","What can be consumed in pregnancy","What food is the best in pregnancy","What should i eat if im suffering from pregnancy","What all can I eat if I'm suffering from pregnancy","What should i eat if im diagnosed with pregnancy","What all can I eat if I'm diagnosed with pregnancy"],
+"responses": [["Dairy Products. During pregnancy, you need to consume extra protein and calcium to meet the needs of the growing fetus ( 7 , 8 ). Legumes. Sweet Potatoes. Salmon. Eggs. Broccoli and Dark, Leafy Greens. Lean Meat. Fish Liver Oil."]]
+},
+{"tag":"foods to be avoided in hyperthyroid" ,
+"patterns": ["What to eat in hyperthyroid","What can be eaten in hyperthyroid","What food is recommended in hyperthyroid","What can be consumed in hyperthyroid","What food is the best in hyperthyroid","What should i eat if im suffering from hyperthyroid","What all can I eat if I'm suffering from hyperthyroid","What should i eat if im diagnosed with hyperthyroid","What all can I eat if I'm diagnosed with hyperthyroid"],
+"responses": [["non-iodized salt. coffee or tea (without milk or dairy- or soy-based creamers).egg whites. fresh or canned fruit. unsalted nuts and nut butters. homemade bread or breads made without salt, dairy, and eggs.popcorn with non-iodized salt.oats."]]
+},
+{"tag":"foods to be avoided in hypothyroid" ,
+"patterns": ["What to eat in hypothyroid","What can be eaten in hypothyroid","What food is recommended in hypothyroid","What can be consumed in hypothyroid","What food is the best in hypothyroid","What should i eat if im suffering from hypothyroid","What all can I eat if I'm suffering from hypothyroid","What should i eat if im diagnosed with hypothyroid","What all can I eat if I'm diagnosed with hypothyroid"],
+"responses": [["Summary People with hypothyroidism have plenty of healthy food options, including eggs, meat, fish, most fruits and vegetables, gluten-free grains and seeds, all dairy products, and non-caffeinated beverages.So if you do, it's a good idea to limit your intake of Brussels sprouts, cabbage, cauliflower, kale, turnips, and bok choy, because research suggests digesting these vegetables may block the thyroid's ability to utilize iodine, which is essential for normal thyroid function"]]
+},
+{"tag":"foods to be avoided in diabetes" ,
+"patterns": ["What to eat in diabetes","What can be eaten in diabetes","What food is recommended in diabetes","What can be consumed in diabetes","What food is the best in diabetes","What should i eat if im suffering from diabetes","What all can I eat if I'm suffering from diabetes","What should i eat if im diagnosed with diabetes","What all can I eat if I'm diagnosed with diabetes"],
+"responses": [["Avoid Sedentary Behavior. Fatty Fish. Leafy Greens. Cinnamon. Eggs.Chia Seeds.Turmeric. .Greek Yogurt. Nuts."]]
+},
+{"tag":"foods to be avoided in HIV AIDS" ,
+"patterns": ["What to eat in HIV AIDS","What can be eaten in HIV AIDS","What food is recommended in HIV AIDS","What can be consumed in HIV AIDS","What food is the best in HIV AIDS","What should i eat if im suffering from HIV AIDS","What all can I eat if I'm suffering from HIV AIDS","What should i eat if im diagnosed with HIV AIDS","What all can I eat if I'm diagnosed with HIV AIDS"],
+"responses": [["Eat plenty of fruits and vegetables.Go for lean protein. Your body uses it to build muscle and a strong immune system. Choose healthy options like lean beef, poultry, fish, eggs, beans, and nuts.Eating a diet high in vegetables, fruits, whole grains, and legumes. Choosing lean, low-fat sources of protein. Limiting sweets, soft drinks, and foods with added sugar."]]
+},
+{"tag":"doctor for asthma" ,
+"patterns": ["Can you recommend me a doctor for asthma","Can you suggest me a doctor for asthma","Can you suggest me a general physician asthma","Can you give me a doctor for asthma"],
+"responses": [["1.Mr x : +9166567","2.Mr y : +916542"]]
+},
+{"tag":"doctor for dengue" ,
+"patterns": ["Can you recommend me a doctor for dengue","Can you suggest me a doctor for dengue","Can you suggest me a general physician dengue","Can you give me a doctor for dengue"],
+"responses": [["1.Mr a : +9166567","2.Mr b : +916542"]]
+},
+{"tag":"doctor for malaria" ,
+"patterns": ["Can you recommend me a doctor for malaria","Can you suggest me a doctor for malaria","Can you suggest me a general physician malaria","Can you give me a doctor for malaria"],
+"responses": [["1.Mr d : +9166567","2.Mr e : +916542"]]
+},
+{"tag":"doctor for tuberculosis" ,
+"patterns": ["Can you recommend me a doctor for tuberculosis","Can you suggest me a doctor for tuberculosis","Can you suggest me a general physician tuberculosis","Can you give me a doctor for tuberculosis"],
+"responses": [["1.Mr f : +9166567","2.Mr j : +916542"]]
+},
+{"tag":"doctor for chicken pox" ,
+"patterns": ["Can you recommend me a doctor for chicken pox","Can you suggest me a doctor for chicken pox","Can you suggest me a general physician chicken pox","Can you give me a doctor for chicken pox"],
+"responses": [["1.Mr t : +9166567","2.Mr u : +916542"]]
+}
+
+]
+}

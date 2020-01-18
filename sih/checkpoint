@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/parth/SIH_Final/sih/model.tflearn"
+all_model_checkpoint_paths: "/home/parth/SIH_Final/sih/model.tflearn"
